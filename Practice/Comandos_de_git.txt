@@ -1,0 +1,12 @@
+----------------------------------------------------------
+AGREGAR UN REPOSITORIO REMOTO
+----------------------------------------------------------
+git init
+git remote add [Nombre] [URL]
+git clone [URL]
+
+>ver los remotos que tienes
+git remote -v
+
+>borrar remotos
+git remote rm [NombreRemoto]
