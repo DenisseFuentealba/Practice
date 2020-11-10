@@ -1,0 +1,14 @@
+----------------------------------------------------------
+EL REPOSITORIO REMOTO
+----------------------------------------------------------
+> VER los remotos que tienes
+git remote -v
+
+>BORRAR remotos
+git remote rm [NombreRemoto]
+
+>CAMBIO de nombre de un remoto
+git remote rename [AntiguoNombre] [NuevoNombre]
+
+> AGREGAR remoto
+git remote add [Nombre] [URL]
