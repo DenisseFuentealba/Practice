@@ -71,13 +71,17 @@ git log --before="today"
 > VER commit de una persona
 git log --autor="[NombrePersona]"
 
+>BUSCA una palabra en los commit(key sensitive)
+git log grep=""	
 
+>BUSCA una palabra en los commit(SIN key sensitive)
+git log grep="" -i
 
+>VER el historial de un archivo.
+git log --nombreArchivo
 
-
-
-
-
+>Filtro por contenido
+git log -S"palabra"
 
 
 
