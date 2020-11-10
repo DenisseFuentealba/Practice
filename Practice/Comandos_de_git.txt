@@ -1,5 +1,5 @@
 ----------------------------------------------------------
-CONFIGURACION PERSONAL EN GIT
+CONFIGURACION PERSONAL EN GIT CON HTTP
 ----------------------------------------------------------
 > VER la version de git
 git --version
@@ -33,17 +33,30 @@ git remote rename [AntiguoNombre] [NuevoNombre]
 > AGREGAR remoto
 git remote add [Nombre] [URL]
 
+> DESCARGA de archivos 
+git clone [URL]
+
+>>Actualizar un repositorio en tu PC
+git pull
+
 ----------------------------------------------------------
 SUBIR CONTENIDO A UN REMOTO
 ----------------------------------------------------------
 > GUIA
 git add ...
-git commit -, "[mensaje en infinitivo]"
+git commit -m "[mensaje en infinitivo]"
+git push origin master
 
 >Agregar un archivo especifico
 git add [nombreArchivo] 
+
 >AGREGAR todo
 git add -A
+
+>comentar la subida 
+git commit -m "[mensaje en infinitivo]"
+
+>hacer varios comentarios seguidos
 
 ----------------------------------------------------------
 TIPOS DE LOGS
@@ -51,10 +64,13 @@ TIPOS DE LOGS
 *cuando aprace un head en los commit, eso muestra un cambio de nombre
 del repositorio y lo anexa a los logs.
 
+>>SINTASIS DE UN LOG
+git log [<options>] [<revision range>] [[--] <path>…​]
+
 > HISTORIAL  de log (id Commit, ubicacion, autor, fecha y mensaje)
 git log
 
->HIstorial de una lina (ID commit y mensaje)
+>HISTORIAL de una lina (ID commit y mensaje)
 git log --oneline
 
 > Muestra los cambios en un archivo (ejemplo lineas de codigo modificadas)
@@ -65,17 +81,17 @@ git log checkout _idCommit_
 > VER commit despues de tuyo
 git log --after="today"
 
-> Vcommit del dia anterior
+> VER commit del dia anterior
 git log --before="today"
 
 > VER commit de una persona
 git log --autor="[NombrePersona]"
 
 >BUSCA una palabra en los commit(key sensitive)
-git log grep=""	
+git log --grep=""	
 
 >BUSCA una palabra en los commit(SIN key sensitive)
-git log grep="" -i
+git log --grep="" -i
 
 >VER el historial de un archivo.
 git log --nombreArchivo
@@ -83,6 +99,64 @@ git log --nombreArchivo
 >Filtro por contenido
 git log -S"palabra"
 
+-------------------------------------
+GIT DECORATE
+-------------------------------------
+>INDICA puntualmente donde estamos situados con HEAD.
+git --decorate 
+
+*HEAD es el nombre de nuestro repositorio local (a este se le pueden dar nombres)
+
+-------------------------------------
+CREAR UN REPOSITORIO y LLAVE SSH
+-------------------------------------
+* El dueño tiene la llave privada mientras que los demas 
+tedran la llave publica.
+
+> GUIA de instalacion de un remoto
+git init
+git remote add [Nombre] [SHH]
+git clone [SSH]
+
+>Agregar por shh
+git remote add origin [shhDeLaPaginaDeGit] 
+(origin = nombre de la rama creada, remote es la conexion remota de git)
+
+CREAR UNA LLAVE SSH
+	
+ssh-keygen -t rsa -b 4096 -C "[email]"
+
+enter (aceptar la localizacion por defecto o cambiarla).
+
+-------------------------------------
+Registrar llave SSH
+-------------------------------------
+>muestra en la terminal el contenido de documento.
+cat id_rsa.pub
+
+* Se copia el codigo que entraga la terminal
+* Ir a la pagina y personal settings y agregarla.
+
+
+EN PROCESO
+------------------------------------
+ACTUALIZAR CON UNA RAMA ESCONDIDA
+-------------------------------------
+ORIGIN/MASTER <--- esra es la rama escondida
+y para verla si hay cambios se usa
+git fetch origin
+
+para fusionarla con la master
+git merge origin/master
+
+crear un archivo
+touch nomBreArchivo.xxx
+
+git asss -A
+git commit -m "" 
+git origin master
+
+y asi quedan en el repo actualizado
 
 
 

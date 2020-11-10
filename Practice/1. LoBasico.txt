@@ -1,0 +1,59 @@
+----------------------------------------------------------
+CONFIGURACION PERSONAL EN GIT CON HTTP
+----------------------------------------------------------
+> VER la version de git
+git --version
+
+> CONFIGURAR nombre de usuario global (aplicable solo en tu PC)
+git config --global user.name [Nombre usuario]
+
+> CONFIGURAR email de usuario global (aplicable solo en tu PC)
+git config --global user.email [correo]
+
+> VER las configuraciones de git en el pc.
+git config --list	
+
+----------------------------------------------------------
+EL REPOSITORIO REMOTO
+----------------------------------------------------------
+> GUIA de instalacion de un remoto
+git init
+git remote add [Nombre] [URL]
+git clone [URL]
+
+> VER los remotos que tienes
+git remote -v
+
+>BORRAR remotos
+git remote rm [NombreRemoto]
+
+>CAMBIO de nombre de un remoto
+git remote rename [AntiguoNombre] [NuevoNombre]
+
+> AGREGAR remoto
+git remote add [Nombre] [URL]
+
+> DESCARGA de archivos 
+git clone [URL]
+
+>>Actualizar un repositorio en tu PC
+git pull
+
+----------------------------------------------------------
+SUBIR CONTENIDO A UN REMOTO
+----------------------------------------------------------
+> GUIA
+git add ...
+git commit -m "[mensaje en infinitivo]"
+git push origin master
+
+>Agregar un archivo especifico
+git add [nombreArchivo] 
+
+>AGREGAR todo
+git add -A
+
+>comentar la subida 
+git commit -m "[mensaje en infinitivo]"
+
+>hacer varios comentarios seguidos

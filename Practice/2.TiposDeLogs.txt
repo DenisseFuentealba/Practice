@@ -1,0 +1,40 @@
+----------------------------------------------------------
+TIPOS DE LOGS
+----------------------------------------------------------
+*cuando aprace un head en los commit, eso muestra un cambio de nombre
+del repositorio y lo anexa a los logs.
+
+>>SINTASIS DE UN LOG
+git log [<options>] [<revision range>] [[--] <path>…​]
+
+> HISTORIAL  de log (id Commit, ubicacion, autor, fecha y mensaje)
+git log
+
+>HISTORIAL de una lina (ID commit y mensaje)
+git log --oneline
+
+> Muestra los cambios en un archivo (ejemplo lineas de codigo modificadas)
+
+> REESCRIBE el commit.
+git log checkout _idCommit_
+
+> VER commit despues de tuyo
+git log --after="today"
+
+> VER commit del dia anterior
+git log --before="today"
+
+> VER commit de una persona
+git log --autor="[NombrePersona]"
+
+>BUSCA una palabra en los commit(key sensitive)
+git log --grep=""	
+
+>BUSCA una palabra en los commit(SIN key sensitive)
+git log --grep="" -i
+
+>VER el historial de un archivo.
+git log --nombreArchivo
+
+>Filtro por contenido
+git log -S"palabra"
