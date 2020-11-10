@@ -1,12 +1,84 @@
 ----------------------------------------------------------
-AGREGAR UN REPOSITORIO REMOTO
+CONFIGURACION PERSONAL EN GIT
 ----------------------------------------------------------
+> VER la version de git
+git --version
+
+> CONFIGURAR nombre de usuario global (aplicable solo en tu PC)
+git config --global user.name [Nombre usuario]
+
+> CONFIGURAR email de usuario global (aplicable solo en tu PC)
+git config --global user.email [correo]
+
+> VER las configuraciones de git en el pc.
+git config --list	
+
+----------------------------------------------------------
+EL REPOSITORIO REMOTO
+----------------------------------------------------------
+> GUIA de instalacion de un remoto
 git init
 git remote add [Nombre] [URL]
 git clone [URL]
 
->ver los remotos que tienes
+> VER los remotos que tienes
 git remote -v
 
->borrar remotos
+>BORRAR remotos
 git remote rm [NombreRemoto]
+
+>CAMBIO de nombre de un remoto
+git remote rename [AntiguoNombre] [NuevoNombre]
+
+> AGREGAR remoto
+git remote add [Nombre] [URL]
+
+----------------------------------------------------------
+SUBIR CONTENIDO A UN REMOTO
+----------------------------------------------------------
+> GUIA
+git add ...
+git commit -, "[mensaje en infinitivo]"
+
+>Agregar un archivo especifico
+git add [nombreArchivo] 
+>AGREGAR todo
+git add -A
+
+----------------------------------------------------------
+TIPOS DE LOGS
+----------------------------------------------------------
+*cuando aprace un head en los commit, eso muestra un cambio de nombre
+del repositorio y lo anexa a los logs.
+
+> HISTORIAL  de log (id Commit, ubicacion, autor, fecha y mensaje)
+git log
+
+>HIstorial de una lina (ID commit y mensaje)
+git log --oneline
+
+> Muestra los cambios en un archivo (ejemplo lineas de codigo modificadas)
+
+> REESCRIBE el commit.
+git log checkout _idCommit_
+
+> VER commit despues de tuyo
+git log --after="today"
+
+> Vcommit del dia anterior
+git log --before="today"
+
+> VER commit de una persona
+git log --autor="[NombrePersona]"
+
+
+
+
+
+
+
+
+
+
+
+
